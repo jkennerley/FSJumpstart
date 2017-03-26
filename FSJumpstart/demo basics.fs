@@ -65,7 +65,7 @@ let RandomPosition () =
     let random = new System.Random()
     ( random.NextDouble(), random.NextDouble() )
 // decompose 2 values from fun return ; tuple no fields names values, so use only for 2/3 values and local usage
-let x , y = RandomPosition()
+let x1 , y2 = RandomPosition()
 let xyTuple  = RandomPosition()
 //.....
 
@@ -125,7 +125,6 @@ funRetsRandom2
 //*****************
 //let xsTuple = [| 1 , 2  |] // array of tuple
 //let xs = [| 1  ;  2  |] // array of int
-
 //.....
 
 
