@@ -29,6 +29,7 @@ let i  =      42
 // the binding os to an option, it could be a number or it might not be, 
 let io1 = Some 42
 
+
 // io2 is a let binding to a value, 
 // that value could either {None, a_Number }
 // this is an int option or Option<int>, and it has the value None in it rather than a number
