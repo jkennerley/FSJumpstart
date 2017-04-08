@@ -52,27 +52,21 @@
     </Otherwise>
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props'))" />
-  </Target>
   <ItemGroup>
-    <Content Include="packages.config" />
     <Compile Include="AssemblyInfo.fs" />
+    <Content Include="packages.config" />
     <None Include="MSFT.csv" />
     <None Include="MarketDepth.htm" />
     <None Include="demo csv type provider.fsx" />
     <None Include="demo html type provider.fsx" />
     <Compile Include="demo basics.fs" />
-    <None Include="arrays.fsx" />
+    <Compile Include="arrays.fs" />
     <Compile Include="lists.fs" />
     <Compile Include="sequences.fs" />
-    <Compile Include="sequence fold reduce.fs" />
-    <Compile Include="sequence choose.fs" />
-    <Compile Include="sequence collect choose.fs" />
-    <Compile Include="fsharp summary.fs" />
+    <Compile Include="sequences fold reduce.fs" />
+    <Compile Include="sequences choose.fs" />
+    <Compile Include="sequences collect choose.fs" />
+    <Compile Include="arrays sequences lists summary.fs" />
     <Compile Include="records.fs" />
     <Compile Include="options.fs" />
     <Compile Include="du and pattern matching.fs" />
@@ -107,6 +101,12 @@
       <HintPath>..\packages\xunit.extensibility.execution.2.2.0\lib\net452\xunit.execution.desktop.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
