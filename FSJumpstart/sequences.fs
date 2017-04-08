@@ -7,6 +7,7 @@ let pfns (x:string) = printfn "%s" x
 
 let ais = [| 1..3 |] // array 
 let lis = [  1..3 ]  // list
+let sqs = {  1..3  }      // seq
 
 // sequence :: same is IEnumerable
 let ss1 = seq { 1..3 }    // seq of int

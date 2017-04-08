@@ -66,15 +66,18 @@
     <None Include="demo csv type provider.fsx" />
     <None Include="demo html type provider.fsx" />
     <Compile Include="demo basics.fs" />
-    <Compile Include="fsharp arrays.fs" />
-    <Compile Include="fsharp lists.fs" />
-    <Compile Include="quicksort demo.fs" />
-    <Compile Include="fsharp sequences.fs" />
+    <None Include="arrays.fsx" />
+    <Compile Include="lists.fs" />
+    <Compile Include="sequences.fs" />
+    <Compile Include="sequence fold reduce.fs" />
+    <Compile Include="sequence choose.fs" />
+    <Compile Include="sequence collect choose.fs" />
     <Compile Include="fsharp summary.fs" />
-    <Compile Include="fsharp records.fs" />
-    <Compile Include="fsharp options.fs" />
-    <Compile Include="fsharp pattern matching.fs" />
-    <Compile Include="fsharp du descriminated unions.fs" />
+    <Compile Include="records.fs" />
+    <Compile Include="options.fs" />
+    <Compile Include="du and pattern matching.fs" />
+    <Compile Include="du descriminated unions.fs" />
+    <Compile Include="demo quicksort.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Charting">

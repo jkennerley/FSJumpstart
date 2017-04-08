@@ -10,10 +10,10 @@ type QuicksortUnitTest( output : ITestOutputHelper ) =
     let rec quicksort = function 
         | [] -> []
         | x :: xs ->
-            let smaller = List.filter ((>) x) xs 
-            let larger = List.filter ((<=) x ) xs
-            // 
-            quicksort smaller @ [x] @ quicksort larger
+                    let smaller = List.filter ( ( >  )  x ) xs 
+                    let larger  = List.filter ( ( <= )  x ) xs
+                    // 
+                    quicksort smaller      @ [x] @     quicksort larger
 
     [<Fact>]
     let ``quicksort [1;2] is [1;2]``() =
